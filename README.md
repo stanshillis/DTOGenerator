@@ -17,40 +17,40 @@ Let Visual Studio's T4 templating engine do the work for you.
 
 **Contents:**
 
-		int Age
+	int Age
 
-		string Name
+	string Name
 
-		<#@ include file="$(ProjectDir)DTO.tt" #>
+	<#@ include file="$(ProjectDir)DTO.tt" #>
 
 **Generated File:** BasicDTO.cs
 
 **Contents:**
 
-		using System;
+	using System;
 
-		// ========================================================
-		// DO NOT EDIT. FILE GENERATED ON 2/11/2014 11:10:03 PM.
-		// ========================================================
+	// ========================================================
+	// DO NOT EDIT. FILE GENERATED ON 2/11/2014 11:10:03 PM.
+	// ========================================================
 
-		namespace DTOGenerator.Sample
+	namespace DTOGenerator.Sample
+	{
+		public class BasicDTO
 		{
-			public class BasicDTO
+			private BasicDTO() {}
+
+			public BasicDTO(int age, string name)
 			{
-				private BasicDTO() {}
-
-				public BasicDTO(int age, string name)
-				{
-					this.Age = age;
-					this.Name = name;
-				}
-
-				public int Age { get; set; }
-
-				public string Name { get; set; }
-
+				this.Age = age;
+				this.Name = name;
 			}
+
+			public int Age { get; set; }
+
+			public string Name { get; set; }
+
 		}
+	}
 
 ## Sample 2: Comments & "using" Statements
 
@@ -58,50 +58,50 @@ Let Visual Studio's T4 templating engine do the work for you.
 
 **Contents:**
 
-		using System.Text.RegularExpressions; // using directives are copied as is
-		using System.Linq;
+	using System.Text.RegularExpressions; // using directives are copied as is
+	using System.Linq;
 
-		int Age
-		// Person's first name
-		string Name
-		public Regex ValidationRule { get; set; }
+	int Age
+	// Person's first name
+	string Name
+	public Regex ValidationRule { get; set; }
 
-		<#@ include file="$(ProjectDir)DTO.tt" #>
+	<#@ include file="$(ProjectDir)DTO.tt" #>
 
 **Generated File:** UsingNamespaceDTO.cs
 
 **Contents:**
 
-		using System.Text.RegularExpressions; // using directives are copied as is
-		using System.Linq;
-		using System;
+	using System.Text.RegularExpressions; // using directives are copied as is
+	using System.Linq;
+	using System;
 
-		// ========================================================
-		// DO NOT EDIT. FILE GENERATED ON 2/11/2014 11:10:03 PM.
-		// ========================================================
+	// ========================================================
+	// DO NOT EDIT. FILE GENERATED ON 2/11/2014 11:10:03 PM.
+	// ========================================================
 
-		namespace DTOGenerator.Sample
+	namespace DTOGenerator.Sample
+	{
+		public class UsingNamespaceDTO
 		{
-			public class UsingNamespaceDTO
+			private UsingNamespaceDTO() {}
+
+			/// <param name="name">Person's first name </param>
+			public UsingNamespaceDTO(int age, string name, Regex validationRule)
 			{
-				private UsingNamespaceDTO() {}
-
-				/// <param name="name">Person's first name </param>
-				public UsingNamespaceDTO(int age, string name, Regex validationRule)
-				{
-					this.Age = age;
-					this.Name = name;
-					this.ValidationRule = validationRule;
-				}
-
-				public int Age { get; set; }
-
-				/// <summary>
-				/// Person's first name
-				/// </summary>
-				public string Name { get; set; }
-
-				public Regex ValidationRule { get; set; }
-
+				this.Age = age;
+				this.Name = name;
+				this.ValidationRule = validationRule;
 			}
+
+			public int Age { get; set; }
+
+			/// <summary>
+			/// Person's first name
+			/// </summary>
+			public string Name { get; set; }
+
+			public Regex ValidationRule { get; set; }
+
 		}
+	}
