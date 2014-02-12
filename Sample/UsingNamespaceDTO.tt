@@ -1,0 +1,13 @@
+﻿using System.Text.RegularExpressions; // using directives are copied as is
+using System.Linq;
+
+int Age
+
+// Person's first name
+string Name
+
+Regex ValidationRule
+
+
+
+<#@ include file="$(ProjectDir)DTO.tt" #>

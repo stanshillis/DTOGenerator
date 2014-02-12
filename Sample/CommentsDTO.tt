@@ -1,0 +1,12 @@
+﻿// Comment for the age property
+int Age
+
+// Comment for the name property
+// Additional comment for the name property
+string Name
+
+DateTime ChangeTimestamp
+
+
+// Class level comment
+<#@ include file="$(ProjectDir)DTO.tt" #>

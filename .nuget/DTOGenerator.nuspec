@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>DTOGenerator</id>
+        <version>1.0.0</version>
+        <title>DTO Generator (T4)</title>
+        <authors>Stan Shillis</authors>
+        <owners>Stan Shillis</owners>
+        <licenseUrl>https://raw.github.com/stanshillis/DTOGenerator/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/stanshillis/DTOGenerator</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Generate data transfer object (DTO) classes from simple T4 templates. Reduce amount of boilerplate code you need to write. Let Visual Studio's T4 templating engine do the work for you.</description>
+        <releaseNotes></releaseNotes>
+        <language>en-US</language>
+        <tags>t4 dto generate generator auto</tags>
+    </metadata>
+    <files>
+        <file src="..\DTO.tt" target="content\DTO.tt" />
+        <file src="README.txt" target="" />
+    </files>
+</package>
